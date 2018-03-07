@@ -63,6 +63,7 @@ h1 {
     <script>
     $(function() {
         $('a').click(function(e) {
+		var input = document.getElementById("content");
         var username = "Weebhook";
 		if ($("#channel").val() == "announcements") {
 		var url = "https://discordapp.com/api/webhooks/420769713891704832/ylnMQn3LWAtS259FTaB6Vc9y2e6MIp-oZ_GO00W9AGvlTjaVuwbc5GJSomqQG8vHfJ--";
@@ -93,6 +94,7 @@ h1 {
         function(){
             Materialize.toast('Message Sent!', 4000)
         });
+		input.value = "";
         });
     });
     </script>

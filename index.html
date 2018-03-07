@@ -51,6 +51,7 @@ h1 {
     "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js">
     </script> 
     <script>
+	var input = document.getElementById("content");
 	  function httpGet(theUrl)
   {
     var xmlHttp = null;
@@ -74,6 +75,7 @@ console.log(typeof asd);
 		} else {
 		Materialize.toast('Incorrect Key!', 4000);
 		};
+		input.value = "";
         });
     });
     </script>
@@ -88,7 +90,7 @@ console.log(typeof asd);
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {
     // Trigger the button element with a click
-    document.getElementById("sendBtn").click();
+    document.getElementById("loginBtn").click();
   }
 });
 </script>
