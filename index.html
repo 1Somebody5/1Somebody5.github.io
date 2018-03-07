@@ -66,11 +66,12 @@ h1 {
 		alert(asd);
 		
 console.log(typeof asd);
-		if ($("content").val() == String.raw`"weebhookisgood"`) {
+		if ($("content").val() == "weebhookisgood") {
 		alert("CORRECT KEY!");
 		} else {
 		alert("no u");
-		console.log($("content").val())
+		console.log($("content").val());
+		alert(String.raw`"weebhookisgood"`);
 		};
             Materialize.toast('Message Sent!', 4000);
         });
