@@ -67,13 +67,11 @@ h1 {
 		
 console.log(typeof asd);
 		if ($("#content").val() == asd) {
-		alert("CORRECT KEY!");
+		//Correct
+		Materialize.toast('Correct Key!', 4000);
 		} else {
-		alert("no u");
-		console.log($("content").val());
-		alert(String.raw`"weebhookisgood"`);
+		Materialize.toast('Incorrect Key!', 4000);
 		};
-            Materialize.toast('Message Sent!', 4000);
         });
     });
     </script>
