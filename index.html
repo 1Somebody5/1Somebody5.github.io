@@ -1,93 +1,100 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>LOLsite</title>
-<style>
-body {
-    background-color: #a300cc;
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel=
+    "stylesheet">
+    <link href=
+    "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"
+    rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Discord Weebhook Sender</title>
+    <style>
+    .btn-full-width {
+    width: 100%;
+    }
+	body {
+    background-color: #16191e;
+}="shortcut icon" type="image/x-icon" href="https://i.gyazo.com/85fa168921248351c82021114e1c57c5.png" />
+h1 {
+    color: white;
 }
-</style>
+.card {
+    position: relative;
+    margin: 0.5rem 0 1rem 0;
+    background-color: #292727;
+    transition: box-shadow .25s;
+    border-radius: 2px;
+}
+	<link rel="icon" type="image/png" href="siteicon.png">
+    </style>
 </head>
 <body>
-<h1>Welcome to the website I mostly made at school</h1>
-<p>
-Lol hey. <br> Here are some g@mes and stuff. Said "g@mes" so no filters get it. You're welcome for the g@mes! :P
-</p>
-<button type="button" onclick="alert('You must really like Javascript.')">Click me for Javascript!</button>
-<br>
-<a href="Subsites/Menu.html">The Menu</a>
-<br>
-
-<img src="Images/giphy.webp" alt="SPONGEBOB" height="295" width="500">
-<br>
-<b>
-<big>
-<script>
-
-
-
-
-var text="Hello this is my rainbow text do you like it?"
-var speed=100
-
-
-
-
-if (document.all||document.getElementById){
-document.write('<span id="highlight">' + text + '</span>')
-var storetext=document.getElementById? document.getElementById("highlight") : document.all.highlight
-}
-else
-document.write(text)
-var hex=new Array("00","14","28","3C","50","64","78","8C","A0","B4","C8","DC","F0")
-var r=1
-var g=1
-var b=1
-var seq=1
-function changetext(){
-rainbow="#"+hex[r]+hex[g]+hex[b]
-storetext.style.color=rainbow
-}
-function change(){
-if (seq==6){
-b--
-if (b==0)
-seq=1
-}
-if (seq==5){
-r++
-if (r==12)
-seq=6
-}
-if (seq==4){
-g--
-if (g==0)
-seq=5
-}
-if (seq==3){
-b++
-if (b==12)
-seq=4
-}
-if (seq==2){
-r--
-if (r==0)
-seq=3
-}
-if (seq==1){
-g++
-if (g==12)
-seq=2
-}
-changetext()
-}
-function starteffect(){
-if (document.all||document.getElementById)
-flash=setInterval("change()",speed)
-}
-starteffect()
-</script>
-</big>
-</b>
+<!––Why the hecc are you looking at my code!?!?! What ur problem? ––>
+    <main class="container">
+        <div class="card card-panel center">
+            <h1>Discord Weebhook Control Panel</h1>
+        </div>
+        <div class="card card-panel">
+            <div class="input-field">
+                <input id="content" type="text"> <label for=
+                "content">Text</label>
+            </div>
+			<p>Keep the emotion field empty for default profile picture. Icons are as follows:<br> "anger" = anger "sad" = sadness "happy" = happiness</p>
+			<div class="input field">
+							 <input id="emotionchoice" type="text"><label for=
+                "content">Emotion</label>
+				</div>
+				<p>Put none for general. Channels supported: "announcements" "stoptheping" "death i guess".</p>
+							<div class="input field">
+							 <input id="channel" type="text"><label for=
+                "content">Channel</label>
+				</div>
+            <div class="row">
+			
+        </div><a class="btn btn-large btn-full-width waves-effect waves-light"
+        href="#!">Send</a>
+    </main>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type=
+    "text/javascript">
+    </script> 
+    <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js">
+    </script> 
+    <script>
+    $(function() {
+        $('a').click(function(e) {
+        var username = "Weebhook";
+		if ($("#channel").val() == "announcements") {
+		var url = "https://discordapp.com/api/webhooks/420769713891704832/ylnMQn3LWAtS259FTaB6Vc9y2e6MIp-oZ_GO00W9AGvlTjaVuwbc5GJSomqQG8vHfJ--";
+		} else if ($("#channel").val() == "stoptheping") {
+		var url = "https://discordapp.com/api/webhooks/420746914338832404/eIFlZE7R0Wmbjk-Ek8SDmtcPxmcEtCCKP5w8cEIM0UTwtKpC2aaAwTmK4HZskQb1AchA";
+		} else if ($("#channel").val() == "death i guess") {
+		var url = "https://discordapp.com/api/webhooks/420771621486198795/y7B1hx4E10H6LQSIrxj5cyWhScLnlObCghEHsMpoL814Lw9pVS7wr52G3nem6IfqD42P";
+		var username = "S L A I N Weebhook";
+		} else if ($("#channel").val() == "safe emergency room") {
+		var url = "https://discordapp.com/api/webhooks/420774357778825216/fFmmb7BcTHyJJHYaOhJH5ZzA_S-qwUXwcNtGlfsH6cdDYrUGT43xMa5j4_lznUVUPQdX";
+		} else if ($("#channel").val() == "server rules") {
+		var url = "https://discordapp.com/api/webhooks/420774928636182534/s17RMHQQq5-9K_ZQsN6nilcuSA9pXiN-x54Kfd4iU5rmLOlE8zkF5fBGd7Cr6JH3xLHa";
+		}
+		else {
+		var url = "https://discordapp.com/api/webhooks/420045869652377602/rPpzKDJRPxZweBplOPClSZTDLqTsC39LB2h9wJug8IuUyVh1bp7PuOHt15IXB6FlDPXw";
+		}
+        var content = $("#content").val();
+		var avatar_url = "";
+		if ($("#emotionchoice").val() == "anger") {
+		var avatar_url = "https://cdn.discordapp.com/attachments/408056363567153152/419913570554216481/QngPBQc.jpg";
+		} else if ($("#emotionchoice").val() == "sad") {
+		var avatar_url = "https://cdn.discordapp.com/attachments/408056363567153152/419912699514978316/76f9e364208621935d563b36afda3a89.jpg";
+		} else if ($("#emotionchoice").val() == "happy") {
+		var avatar_url = "https://cdn.discordapp.com/attachments/408056363567153152/419915640313348107/hot-anime-wallpaper-HD4.jpg";
+		}
+        $.post(url,
+    {"content": content, "username": username, "avatar_url": avatar_url},
+        function(){
+            Materialize.toast('Message Sent!', 4000)
+        });
+        });
+    });
+    </script>
 </body>
 </html>
