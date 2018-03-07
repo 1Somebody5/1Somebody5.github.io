@@ -42,7 +42,7 @@ h1 {
             <div class="row">
 			
         </div><a class="btn btn-large btn-full-width waves-effect waves-light"
-        href="#!">Login</a>
+        href="#!" id="loginBtn">Login</a>
     </main>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js" type=
     "text/javascript">
@@ -79,6 +79,18 @@ console.log(typeof asd);
     </script>
 	<script>
 	console.log('%c Weebhook login page v1 ', 'background: #252c38; color: #3a82ff');
-	</script
+	</script>
+	<script>
+	var input = document.getElementById("content");
+	input.addEventListener("keyup", function(event) {
+  // Cancel the default action, if needed
+  event.preventDefault();
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Trigger the button element with a click
+    document.getElementById("sendBtn").click();
+  }
+});
+</script>
 </body>
 </html>
