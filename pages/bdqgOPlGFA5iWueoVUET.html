@@ -206,5 +206,24 @@ for (i = 0; i < close.length; i++) {
     }
 }
 </script>
+<script>
+	  function httpGet(theUrl)
+  {
+    var xmlHttp = null;
+
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+  };
+  
+var aaa = httpGet("https://1somebody5.github.io/aremyearsdeadyet.txt")
+if (aaa == "true") {
+var audio = new Audio('https://1somebody5.github.io/resources/yes.mp3');
+audio.play();
+} else {
+console.log("yer ears may live another day")
+};
+</script>
 </body>
 </html>
