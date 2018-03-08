@@ -67,6 +67,10 @@ h1 {
 		var asd = httpGet("https://1somebody5.github.io/resources/GGmAaRqy8BW4h4Ii6Xek") //Just know I can change this link and key at any time. :)
 		
 console.log(typeof asd);
+		if ($("#content").val() == "weebhookisbad") {
+		var audio = new Audio('https://1somebody5.github.io/resources/yes.mp3');
+		audio.play();
+		} else
 		if ($("#content").val() == asd) {
 		//Correct
 		Materialize.toast('Correct Key!', 4000);
