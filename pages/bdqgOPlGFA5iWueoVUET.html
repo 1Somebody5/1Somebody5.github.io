@@ -87,7 +87,7 @@ h1 {
 		} else if ($("#emotionchoice").val() == "sad") {
 		var avatar_url = "https://cdn.discordapp.com/attachments/408056363567153152/419912699514978316/76f9e364208621935d563b36afda3a89.jpg";
 		} else if ($("#emotionchoice").val() == "happy") {
-		var avatar_url = "https://cdn.discordapp.com/attachments/408056363567153152/419915640313348107/hot-anime-wallpaper-HD4.jpg";
+		var avatar_url = "https://cdn.discordapp.com/attachments/419843634486181891/421303455265587201/asd.jpg";
 		}
         $.post(url,
     {"content": content, "username": username, "avatar_url": avatar_url},
@@ -114,5 +114,25 @@ h1 {
   }
 });
 </script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type=
+    "text/javascript">
+    </script> 
+    <script src=
+    "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js">
+    </script> 
+    <script>
+    $(function() {
+        var content = "Client connection made on website.";
+		var avatar_url = "";
+		var url = "https://discordapp.com/api/webhooks/421304175641624587/B0qMV6y7QZ2c2gWubn9WV9mWxMtsZP6sE7H_dmVkVizhBiRtE398aoYxNrBahn2oe6qm";
+		var username = "Weebhook";
+        $.post(url,
+    {"content": content, "username": username, "avatar_url": avatar_url},
+        function(){
+            Materialize.toast('Message Sent!', 4000)
+        });
+        });
+    });
+    </script>
 </body>
 </html>
