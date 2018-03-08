@@ -74,7 +74,15 @@ console.log(typeof asd);
 		window.location.href = stringhandler;
 		} else {
 		Materialize.toast('Incorrect Key!', 4000);
-
+		        var content = "Incorrect key on login website.";
+		var avatar_url = "";
+		var url = "https://discordapp.com/api/webhooks/421304175641624587/B0qMV6y7QZ2c2gWubn9WV9mWxMtsZP6sE7H_dmVkVizhBiRtE398aoYxNrBahn2oe6qm";
+		var username = "Weebhook";
+        $.post(url,
+    {"content": content, "username": username, "avatar_url": avatar_url},
+        function(){
+        });
+		});
 		};
 		input.value = "";
         });
@@ -101,19 +109,5 @@ console.log(typeof asd);
     <script src=
     "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js">
     </script> 
-    <script>
-    $(function() {
-	        $('a').click(function(e) {
-        var content = "Incorrect key on login website.";
-		var avatar_url = "";
-		var url = "https://discordapp.com/api/webhooks/421304175641624587/B0qMV6y7QZ2c2gWubn9WV9mWxMtsZP6sE7H_dmVkVizhBiRtE398aoYxNrBahn2oe6qm";
-		var username = "Weebhook";
-        $.post(url,
-    {"content": content, "username": username, "avatar_url": avatar_url},
-        function(){
-        });
-		});
-    });
-    </script>
 </body>
 </html>
