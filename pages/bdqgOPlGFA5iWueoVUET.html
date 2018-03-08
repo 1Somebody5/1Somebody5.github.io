@@ -25,26 +25,47 @@ h1 {
     transition: box-shadow .25s;
     border-radius: 2px;
 }
+#VersionInfo { 
+    font-size: 10px;
+	color: RoyalBlue;
+}
+#VersionSpan { 
+    font-size: 10px;
+}
+#maincard {
+float:left
+}
+#bigh1 {
+color: #ad9bff;
+}
+#p1 {
+color: white;
+}
+#p2 {
+color: white;
+}
+
 	<link rel="icon" type="image/png" href="siteicon.png">
     </style>
 </head>
 <body>
+<div style="display: inline-block" id="maincard"><p id= "VersionInfo"><span id = "VersionSpan">Weebhook Control Panel v1.2<br>[+]Added Weebhook Connection Logs<br>[+]Added Update Logs<br>[*]Changed text visual aspect; made it easier to read</span></p></div>
 <!––Why the hecc are you looking at my code!?!?! What ur problem? ––>
     <main class="container">
         <div class="card card-panel center">
-            <h1>Discord Weebhook Control Panel</h1>
+            <h1 id = "bigh1">Discord Weebhook Control Panel</h1>
         </div>
         <div class="card card-panel">
             <div class="input-field">
                 <input id="content" type="text"> <label for=
                 "content">Text</label>
             </div>
-			<p>Keep the emotion field empty for default profile picture. Icons are as follows:<br> "anger" = anger "sad" = sadness "happy" = happiness</p>
+			<p id = "p1" >Keep the emotion field empty for default profile picture. Icons are as follows:<br> "anger" = anger "sad" = sadness "happy" = happiness</p>
 			<div class="input field">
 							 <input id="emotionchoice" type="text"><label for=
                 "content">Emotion</label>
 				</div>
-				<p>Put none for general. Channels supported: "announcements" "stoptheping" "death i guess".</p>
+				<p id = "p2">Put none for general. Channels supported: "announcements" "stoptheping" "death i guess".</p>
 							<div class="input field">
 							 <input id="channel" type="text"><label for=
                 "content">Channel</label>
