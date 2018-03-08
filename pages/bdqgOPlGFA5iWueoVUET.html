@@ -44,13 +44,49 @@ color: white;
 #p2 {
 color: white;
 }
+body {
+    opacity: 1;
+    transition: 1s opacity;
+}
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+.alert.info {background-color: #2196F3;}
 
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
 	<link rel="icon" type="image/png" href="siteicon.png">
     </style>
 </head>
 <body>
+<script>document.body.className += ' fade-out';</script>
 <div style="display: inline-block" id="maincard"><p id= "VersionInfo"><span id = "VersionSpan">Weebhook Control Panel v1.2<br>[+]Added Weebhook Connection Logs<br>[+]Added Update Logs<br>[*]Changed text visual aspect; made it easier to read</span></p></div>
 <!––Why the hecc are you looking at my code!?!?! What ur problem? ––>
+<div class="alert info">
+  <span class="closebtn">&times;</span>  
+  <strong>Just thought you should know...</strong> If you do <a href="https://i.gyazo.com/9cfdd1b6cf0b6cb6ea7a0b72ea9c626b.png" style = "color: Tomato" target = "_blank"><i>this</i></a>, ur key will be changed :)
+</div>
     <main class="container">
         <div class="card card-panel center">
             <h1 id = "bigh1">Discord Weebhook Control Panel</h1>
@@ -122,6 +158,11 @@ color: white;
 	console.log('%c [+]Added Weebhook Connection Logs', 'background: #252c38; color: #3a82ff');
 	</script>
 	<script>
+	$(function() {
+    $('body').removeClass('fade-out');
+	});
+	</script>
+	<script>
 	var input = document.getElementById("content");
 	input.addEventListener("keyup", function(event) {
   // Cancel the default action, if needed
@@ -152,5 +193,17 @@ color: white;
         });
     });
     </script>
+	<script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+}
+</script>
 </body>
 </html>
