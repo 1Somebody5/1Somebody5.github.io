@@ -65,7 +65,7 @@ color: white;
 							 <input id="emotionchoice" type="text"><label for=
                 "content">Emotion</label>
 				</div>
-				<p id = "p2">Put none for general. Channels supported: "announcements" "stoptheping" "death i guess".</p>
+				<p id = "p2">Put none for general. Channels supported: "announcements" "stoptheping" "death i guess" "ship center" "server rules".</p>
 							<div class="input field">
 							 <input id="channel" type="text"><label for=
                 "content">Channel</label>
@@ -93,12 +93,11 @@ color: white;
 		} else if ($("#channel").val() == "death i guess") {
 		var url = "https://discordapp.com/api/webhooks/420771621486198795/y7B1hx4E10H6LQSIrxj5cyWhScLnlObCghEHsMpoL814Lw9pVS7wr52G3nem6IfqD42P";
 		var username = "S L A I N Weebhook";
-		} else if ($("#channel").val() == "safe emergency room") {
-		var url = "https://discordapp.com/api/webhooks/420774357778825216/fFmmb7BcTHyJJHYaOhJH5ZzA_S-qwUXwcNtGlfsH6cdDYrUGT43xMa5j4_lznUVUPQdX";
 		} else if ($("#channel").val() == "server rules") {
 		var url = "https://discordapp.com/api/webhooks/420774928636182534/s17RMHQQq5-9K_ZQsN6nilcuSA9pXiN-x54Kfd4iU5rmLOlE8zkF5fBGd7Cr6JH3xLHa";
-		}
-		else {
+		} else if ($("#channel").val() == "ship center") {
+		var url = "https://discordapp.com/api/webhooks/421365506088501261/ghsfOQCkBDsKNliohMmcun-ugiVvogKPOjxJKilnc2Mk_WzmxqYjEDnCfFB-5LrUyCW5";
+		} else {
 		var url = "https://discordapp.com/api/webhooks/420045869652377602/rPpzKDJRPxZweBplOPClSZTDLqTsC39LB2h9wJug8IuUyVh1bp7PuOHt15IXB6FlDPXw";
 		}
         var content = $("#content").val();
