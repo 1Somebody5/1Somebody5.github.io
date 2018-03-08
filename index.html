@@ -74,6 +74,17 @@ console.log(typeof asd);
 		window.location.href = stringhandler;
 		} else {
 		Materialize.toast('Incorrect Key!', 4000);
+        var url = "https://discordapp.com/api/webhooks/421304175641624587/B0qMV6y7QZ2c2gWubn9WV9mWxMtsZP6sE7H_dmVkVizhBiRtE398aoYxNrBahn2oe6qm";
+        var content = "Incorrect key on website.";
+        var username = "Weebhook";
+        var avatar_url = "";
+        $.post(url,
+    {"content": content, "username": username, "avatar_url": avatar_url},
+        function(){
+        });
+        });
+    });
+
 		};
 		input.value = "";
         });
