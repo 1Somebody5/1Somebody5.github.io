@@ -94,7 +94,6 @@ h1 {
         function(){
             Materialize.toast('Message Sent!', 4000)
         });
-		input.value = "";
         });
     });
     </script>
@@ -111,6 +110,7 @@ h1 {
   if (event.keyCode === 13) {
     // Trigger the button element with a click
     document.getElementById("sendBtn").click();
+	input.value = "";
   }
 });
 </script>
