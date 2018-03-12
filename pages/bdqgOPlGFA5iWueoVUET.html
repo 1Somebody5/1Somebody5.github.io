@@ -102,7 +102,7 @@ body.fade-out {
 							 <input id="emotionchoice" type="text"><label for=
                 "content">Emotion</label>
 				</div>
-				<p id = "p2">Put none for general. Channels supported: "announcements" "stoptheping" "death i guess" "ship center" "server rules".</p>
+				<p id = "p2">Put none for general. Channels supported: "announcements" "stoptheping" "timeout corner" "server rules" "safe emergency room".</p>
 							<div class="input field">
 							 <input id="channel" type="text"><label for=
                 "content">Channel</label>
@@ -124,18 +124,19 @@ body.fade-out {
 		var input = document.getElementById("content");
         var username = "Weebhook";
 		if ($("#channel").val() == "announcements") {
-		var url = "https://discordapp.com/api/webhooks/421863025599971329/WWXYjT0q9Y0zhcT63uOV1HWlB60iq_yOg9XPoQ4NLEUuHf6gywPh9Fql6cCCbWG9Cj3b";
+		var url = "https://discordapp.com/api/webhooks/422535301936971778/UWXq922wH2Lxm9471lsLEeHhLughfR66vOdkuYCvpSXgTAkOj6mUt8Vq3pCz-70pKDzV";
 		} else if ($("#channel").val() == "stoptheping") {
-		var url = "https://discordapp.com/api/webhooks/420746914338832404/eIFlZE7R0Wmbjk-Ek8SDmtcPxmcEtCCKP5w8cEIM0UTwtKpC2aaAwTmK4HZskQb1AchA";
-		} else if ($("#channel").val() == "death i guess") {
-		var url = "https://discordapp.com/api/webhooks/421499953559371796/drul3VKRD29S694nXMBTsNEO-y1hvBiLBoEGhykwGOYoI_onczoGivQwahm7jc8AiuhA";
+		var url = "https://discordapp.com/api/webhooks/422535772332359681/nikIFJo5-JGvTSznCSoPcAb_8ay11-bbhu7sBqbgrax6pOHz9L-hZH-qr8Blv7x_Ch5b";
+		} else if ($("#channel").val() == "timeout corner") {
+		var url = "https://discordapp.com/api/webhooks/422536116475002891/qEJRngclUjn_3UymWtu5pg5SnxmYXh8V3307f5a8JcJA3P0gkWp8JGodJDcc3HZmoU3v";
 		var username = "S L A I N Weebhook";
+		
 		} else if ($("#channel").val() == "server rules") {
-		var url = "https://discordapp.com/api/webhooks/420774928636182534/s17RMHQQq5-9K_ZQsN6nilcuSA9pXiN-x54Kfd4iU5rmLOlE8zkF5fBGd7Cr6JH3xLHa";
-		} else if ($("#channel").val() == "ship center") {
-		var url = "https://discordapp.com/api/webhooks/421365506088501261/ghsfOQCkBDsKNliohMmcun-ugiVvogKPOjxJKilnc2Mk_WzmxqYjEDnCfFB-5LrUyCW5";
+		var url = "https://discordapp.com/api/webhooks/422535462222037013/q85DDzG2ZfZrrmhQv0lQej8wFb2u8UueT_XuNgOOAS0G4CTTGel32yj0CYC-uwDhv-xs";
+		} else if ($("#channel").val() == "secret emergency room") {
+		var url = "https://discordapp.com/api/webhooks/422542292583186433/SHmkeg_SJ4Kv0I6OqlcZ8qGLn1L5RjBmoqjOCP0c2fnLzyHWtUeMqHmQ_rTFVxsvRyXo";
 		} else {
-		var url = "https://discordapp.com/api/webhooks/421860010868342784/KuUuRADCQMhIYxD2_O7yH_MlmyFotUoYeMp7Of9lNFRCwmO4e30xPgvfgwNycYEWPOnN";
+		var url = "https://discordapp.com/api/webhooks/422532189553557506/JzsDMiUL5dsGXlCn757jC01j_Yfg3yia4J-_Rpg-FEOOO06q1gxxzLGJfz7IkFbWlnhw";
 		}
         var content = $("#content").val();
 		var avatar_url = "";
@@ -145,6 +146,8 @@ body.fade-out {
 		var avatar_url = "https://cdn.discordapp.com/attachments/408056363567153152/419912699514978316/76f9e364208621935d563b36afda3a89.jpg";
 		} else if ($("#emotionchoice").val() == "happy") {
 		var avatar_url = "https://cdn.discordapp.com/attachments/419843634486181891/421303455265587201/asd.jpg";
+		} else {
+		var avatar_url = "https://i.gyazo.com/f3e4ee970092646023abfacf5ba2592a.jpg";
 		}
         $.post(url,
     {"content": content, "username": username, "avatar_url": avatar_url},
